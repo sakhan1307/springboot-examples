@@ -63,7 +63,7 @@ public class WrapperCustomerController {
 	      HttpEntity<Customer> request = new HttpEntity<>(customer,headers);
 	      
 		Customer addedCustomer =restTemplate.postForObject(SERVICE_URL+"/add", request, Customer.class);
-		System.out.println("custwrapper-microservice add() found: " + addedCustomer);
+		logger.info("custwrapper-microservice add() found: " + addedCustomer);
 		return addedCustomer;
 	}
 	
